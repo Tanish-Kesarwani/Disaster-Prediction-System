@@ -9,25 +9,32 @@
 <body>
     <div class="container">
         <h1>Tsunami Prediction</h1>
-        <form method="post" class="form">
-            <div class="form-group">
-                <label for="magnitude">Magnitude:</label>
-                <input type="number" step="any" name="magnitude" required>
+        <div class="form-container">
+            <form method="post" class="form">
+                <div class="form-group">
+                    <label for="magnitude">Magnitude:</label>
+                    <input type="number" step="any" name="magnitude" required>
+                </div>
+                <div class="form-group">
+                    <label for="depth">Depth:</label>
+                    <input type="number" step="any" name="depth" required>
+                </div>
+                <div class="form-group">
+                    <label for="latitude">Latitude:</label>
+                    <input type="number" step="any" name="latitude" required>
+                </div>
+                <div class="form-group">
+                    <label for="longitude">Longitude:</label>
+                    <input type="number" step="any" name="longitude" required>
+                </div>
+                <button type="submit">Predict</button>
+            </form>
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='tsunami_image.png') }}" alt="Tsunami Image">
             </div>
-            <div class="form-group">
-                <label for="depth">Depth:</label>
-                <input type="number" step="any" name="depth" required>
-            </div>
-            <div class="form-group">
-                <label for="latitude">Latitude:</label>
-                <input type="number" step="any" name="latitude" required>
-            </div>
-            <div class="form-group">
-                <label for="longitude">Longitude:</label>
-                <input type="number" step="any" name="longitude" required>
-            </div>
-            <button type="submit">Predict</button>
-        </form>
+        </div>
     </div>
 </body>
 </html>
+
+
